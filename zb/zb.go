@@ -88,3 +88,14 @@ func (self *ZB)currency2Id(currency Currency)string{
 	}
 	panic("currency error")
 }
+
+
+func (self *ZB)GetWithdrawalsFee(currency Currency)float64{
+	switch currency {
+	case USDT:
+		return 5
+	case BTC:
+		return 0.001
+	}
+	panic("currency error")
+}

@@ -88,3 +88,13 @@ func (self *OKEX)currency2Id(currency Currency)string{
 	}
 	panic("currency error")
 }
+
+func (self *OKEX)GetWithdrawalsFee(currency Currency)float64{
+	switch currency {
+	case USDT:
+		return 2
+	case BTC:
+		return 0.0005
+	}
+	panic("currency error")
+}

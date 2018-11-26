@@ -7,4 +7,6 @@ type API interface {
 	GetDepth(size int, currency Currency) (*Depth, error)
 
 	GetExchangeName() string
+
+	GetWithdrawalsFee(currency Currency)float64
 }
