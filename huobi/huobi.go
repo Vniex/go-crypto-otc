@@ -58,7 +58,7 @@ func (self *Huobi)GetDepth(size int, currency Currency) (*Depth,error){
 		ask_dep,
 		bid_dep,
 	}
-	return dep,nil
+	return dep.AggDep(),nil
 }
 func (self  *Huobi)ParseDepth(depmap map[string]interface{}) (DepthRecords,error){
 	if depmap["code"].(float64)!=200{
@@ -97,3 +97,4 @@ func (self *Huobi)GetWithdrawalsFee(currency Currency)float64{
 	}
 	panic("currency error")
 }
+

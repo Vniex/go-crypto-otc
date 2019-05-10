@@ -15,7 +15,7 @@ func TestHuobi_GetExchangeName(t *testing.T) {
 }
 
 func TestHuobi_GetDepth(t *testing.T) {
-	dep,err:=huobi.GetDepth(4,go_crypto_otc.USDT)
+	dep,err:=huobi.GetDepth(50,go_crypto_otc.USDT)
 	t.Log(err)
 	t.Log(dep.AskList)
 	t.Log(dep.BidList)

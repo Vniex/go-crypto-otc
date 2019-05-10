@@ -58,7 +58,7 @@ func (self *ZB)GetDepth(size int, currency Currency) (*Depth,error){
 		ask_dep,
 		bid_dep,
 	}
-	return dep,nil
+	return dep.AggDep(),nil
 }
 func (self  *ZB)ParseDepth(depmap map[string]interface{}) (DepthRecords,error){
 	resMsgMap:=depmap["resMsg"].(map[string]interface{})
@@ -84,6 +84,9 @@ func (self *ZB)currency2Id(currency Currency)string{
 		return ZB_BTC
 	case "USDT":
 		return ZB_USDT
+	case "QC":
+		return ZB_QC
+
 
 	}
 	panic("currency error")

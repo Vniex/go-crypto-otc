@@ -51,6 +51,7 @@ var (
 	CNY     = Currency{"CNY", ""}
 	USD     = Currency{"USD", ""}
 	USDT    = Currency{"USDT", ""}
+	QC =Currency{"QC",""}
 
 	BTC     = Currency{"BTC", ""}
 	LTC     = Currency{"LTC", ""}

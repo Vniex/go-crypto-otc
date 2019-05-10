@@ -15,9 +15,14 @@ func TestZB_GetExchangeName(t *testing.T) {
 }
 
 func TestZB_GetDepth(t *testing.T) {
-	dep,err:=ex.GetDepth(4,go_crypto_otc.USDT)
-	t.Log(err)
-	t.Log(dep.AskList)
-	t.Log(dep.BidList)
+	dep,err:=ex.GetDepth(10,go_crypto_otc.QC)
+	if err!=nil{
+		t.Log(err)
+	}else{
+		t.Log(dep.AskList)
+		t.Log(dep.BidList)
+	}
+
+
 
 }

@@ -61,7 +61,7 @@ func (self *OKEX)ParseFullDepth(depmap map[string]interface{},currency Currency)
 		self.ParseDepth(datamap["sell"].([]interface{})),
 		self.ParseDepth(datamap["buy"].([]interface{})),
 	}
-	return dep,nil
+	return dep.AggDep(),nil
 
 }
 
